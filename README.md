@@ -28,7 +28,45 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 ### Step 8: 
    Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    // Step 3: Declare variables
+    int num, rem, binary[32], i, k;
+    
+    // Step 4: Read the decimal number
+    printf("Enter a decimal number: ");
+    scanf("%d", &num);
+    
+    // Step 5: Initialize i
+    i = 0;
+    
+    // Step 6: Repeat while num > 0
+    if (num == 0) {
+        printf("Binary equivalent: 0\n");
+    } else {
+        while (num > 0) {
+            rem = num % 2;
+            binary[i] = rem;
+            i++;
+            num = num / 2;
+        }
+        
+        // Step 7: Display the binary digits in reverse order
+        printf("Binary equivalent: ");
+        for (k = i - 1; k >= 0; k--) {
+            printf("%d", binary[k]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
 # Output:
+<img width="822" height="284" alt="image" src="https://github.com/user-attachments/assets/fbfe7a45-bad4-4b3c-8ae7-a58ec08b2228" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
